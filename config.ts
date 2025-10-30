@@ -7,7 +7,7 @@ const checkConfig = (server: string): Config | Record<string, never> => {
     case "production":
       config = {
         // production url
-        baseUrl: "",
+        baseUrl: "https://wume-ecommerce-admin.vercel.app/",
       };
       break;
     case "local":

@@ -36,7 +36,7 @@ const Categories = () => {
         </div>
         <div className="w-full h-[1px] bg-gray-200 mt-3" />
       </div>
-      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-7">
+      <div className="grid grid-cols-2  sm:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-7">
         {categories.map((item: CategoryProps) => (
           <Link
             to={`/category/${item?._base}`}

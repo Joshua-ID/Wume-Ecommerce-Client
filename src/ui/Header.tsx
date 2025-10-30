@@ -143,10 +143,10 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <div className="w-full bg-darkText text-whiteText">
-        <Container className="py-2 max-w-4xl flex items-center gap-5 justify-between">
+      <div className="w-full bg-darkText  text-whiteText">
+        <Container className="py-2 max-w-4xl flex flex-col md:flex-row  md:items-center gap-5 justify-between">
           <Menu>
-            <MenuButton className="inline-flex items-center gap-2 rounded-md border border-gray-400 hover:border-white py-1.5 px-3 font-semibold text-gray-300 hover:text-whiteText">
+            <MenuButton className="inline-flex  justify-between items-center gap-2 rounded-md border border-gray-400 hover:border-white py-1.5 px-3 font-semibold text-gray-300 hover:text-whiteText">
               Select Category <FaChevronDown className="text-base mt-1" />
             </MenuButton>
             <Transition
@@ -159,7 +159,7 @@ const Header = () => {
             >
               <MenuItems
                 anchor="bottom end"
-                className="w-52 origin-top-right rounded-xl border border-white/5 bg-black p-1 text-sm/6 text-gray-300 [--anchor-gap:var(--spacing-1)] focus:outline-none hover:text-white z-50"
+                className="w-11/12 mt-2 origin-top-right rounded-xl border border-white/5 bg-darkText p-1 text-sm/6 text-gray-300 [--anchor-gap:var(--spacing-1)] focus:outline-none hover:text-white z-50"
               >
                 {categories.map((item: CategoryProps) => (
                   <MenuItem key={item?._id}>
@@ -179,16 +179,18 @@ const Header = () => {
               </MenuItems>
             </Transition>
           </Menu>
-          {bottomNavigation.map(({ title, link }) => (
-            <Link
-              to={link}
-              key={title}
-              className="uppercase  md:inline-flex text-sm font-semibold text-whiteText/90 hover:text-secondaryColor duration-200 "
-            >
-              {title}
-              <span className="inline-flex w-full h-[1px] bg-whiteText absolute bottom-0 left-0 transform -translate-x-[105%] group-hover:translate-x-0 duration-300" />
-            </Link>
-          ))}
+          <div className="flex gap-3 sm:gap-6 flex-wrap md:space-x-8 items-center flex-1 justify-center">
+            {bottomNavigation.map(({ title, link }) => (
+              <Link
+                to={link}
+                key={title}
+                className="uppercase  md:inline-flex text-sm  sm:font-semibold  text-whiteText/90 hover:text-secondaryColor duration-200 "
+              >
+                {title}
+                <span className="inline-flex w-full h-[1px] whitespace-nowrap bg-whiteText absolute bottom-0 left-0 transform -translate-x-[105%] group-hover:translate-x-0 duration-300" />
+              </Link>
+            ))}
+          </div>
         </Container>
       </div>
     </div>

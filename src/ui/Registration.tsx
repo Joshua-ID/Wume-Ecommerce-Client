@@ -72,7 +72,7 @@ const Registration = () => {
       {login ? (
         <Login setLogin={setLogin} />
       ) : (
-        <div className="bg-gray-950 rounded-lg">
+        <div className="bg-darkText rounded-lg">
           <form
             onSubmit={handleRegistration}
             className="max-w-5xl mx-auto pt-10 px-10 lg:px-0 text-white"
@@ -171,7 +171,7 @@ const Registration = () => {
               disabled={loading}
               type="submit"
               className={`mt-5 w-full py-2 uppercase text-base font-bold tracking-wide text-gray-300 rounded-md hover:text-white hover:bg-indigo-600 duration-200 ${
-                loading ? "bg-gray-500 hover:bg-gray-500" : "bg-indigo-700"
+                loading ? "bg-gray-500 hover:bg-gray-500" : "bg-altColor"
               }`}
             >
               {loading ? "Loading..." : "Send"}

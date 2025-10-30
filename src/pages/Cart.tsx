@@ -104,15 +104,13 @@ const Cart = () => {
           </div>
         </>
       ) : (
-        <div className="bg-white h-96 flex flex-col gap-2 items-center justify-center py-5 rounded-lg border border-gray-200 drop-shadow-2xl">
+        <div className="bg-white h-96 flex flex-col gap-6 items-center justify-center py-5 rounded-lg border border-gray-200 drop-shadow-2xl">
           <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Shopping Cart
           </h1>
           <p className="text-lg max-w-[600px] text-center text-gray-600 tracking-wide leading-6">
-            Your cart is empty. Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Repellendus libero ab nulla iure quibusdam
-            obcaecati debitis minima explicabo quidem tenetur ad, voluptate
-            iusto ratione natus. Maxime molestiae doloremque eaque nesciunt!
+            Your cart is empty. Please add some products to proceed with
+            checkout.
           </p>
           <Link
             to={"/product"}

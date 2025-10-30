@@ -5,22 +5,19 @@ const FooterTop = () => {
   const incentives = [
     {
       name: "Free shipping",
-      imageSrc:
-        "https://tailwindui.com/img/ecommerce/icons/icon-shipping-simple.svg",
+      imageSrc: "../../src/assets/shipping.png",
       description:
         "It's not actually free we just price it into the products. Someone's paying for it, and it's not us.",
     },
     {
       name: "10-year warranty",
-      imageSrc:
-        "https://tailwindui.com/img/ecommerce/icons/icon-warranty-simple.svg",
+      imageSrc: "../../src/assets/warranty.png",
       description:
         "If it breaks in the first 10 years we'll replace it. After that you're on your own though.",
     },
     {
       name: "Exchanges",
-      imageSrc:
-        "https://tailwindui.com/img/ecommerce/icons/icon-exchange-simple.svg",
+      imageSrc: "../../src/assets/exchange.png",
       description:
         "If you don't like it, trade it to one of your friends for something of theirs. Don't send it here though.",
     },
@@ -46,7 +43,7 @@ const FooterTop = () => {
                   <img
                     src={item?.imageSrc}
                     alt="image"
-                    className="mx-auto h-16 w-16"
+                    className="mx-auto h-auto w-20"
                   />
                 </div>
               </div>

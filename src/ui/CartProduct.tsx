@@ -59,13 +59,13 @@ const CartProduct = ({ product }: { product: ProductProps }) => {
         <div>
           {product?.isStock && (
             <p className="mt-4 flex space-x-2 text-sm text-gray-700">
-              <FaCheck className="text-lg text-green-500" />{" "}
+              <FaCheck className="text-lg text-secondaryColor" />{" "}
               <span>In Stock</span>
             </p>
           )}
           <p>
             You are saving{" "}
-            <span className="text-sm font-semibold text-green-500">
+            <span className="text-sm font-semibold text-secondaryColor">
               <FormattedPrice
                 amount={product?.regularPrice - product?.discountedPrice}
               />

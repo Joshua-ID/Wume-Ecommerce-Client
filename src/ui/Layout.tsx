@@ -10,13 +10,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       {children}
       <Footer />
       <Toaster
-        position="bottom-right"
+        position="bottom-left"
         reverseOrder={false}
         gutter={8}
         containerClassName=""
         toastOptions={{
           style: {
-            backgroundColor: "black",
+            backgroundColor: "#022f40",
             color: "white",
           },
         }}

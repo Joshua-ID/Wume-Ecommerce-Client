@@ -20,7 +20,7 @@ const Success = () => {
       const saveOrder = async () => {
         try {
           setLoading(true);
-          const orderRef = doc(db, "orders", currentUser?.email!);
+          const orderRef = doc(db, "orders", currentUser.email!);
           const docSnap = await getDoc(orderRef);
           if (docSnap.exists()) {
             // Document exists, update the orderItems array

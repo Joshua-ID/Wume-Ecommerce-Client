@@ -92,7 +92,7 @@ const Product = () => {
                     className="text-xl"
                   />
                   <div className="flex items-center gap-1">
-                    <div className="text-base text-lightText flex items-center">
+                    <div className="text-base text-skyText flex items-center">
                       <MdOutlineStarOutline />
                       <MdOutlineStarOutline />
                       <MdOutlineStarOutline />
@@ -111,7 +111,7 @@ const Product = () => {
                 </p>
                 <p>
                   You are saving{" "}
-                  <span className="text-base font-semibold text-green-500">
+                  <span className="text-base font-semibold text-secondaryColor">
                     <FormattedPrice
                       amount={
                         productData?.regularPrice! -

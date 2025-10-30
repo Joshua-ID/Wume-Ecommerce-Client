@@ -5,11 +5,10 @@ export default {
     extend: {
       colors: {
         whiteText: "#fff",
-        darkText: "#000000",
-        lightText: "#9b9b9b",
-        greenText: "#1d8221",
-        redText: "#E02B2B ",
-        skyText: "#32BDE8",
+        darkText: "#022f40",
+        skyText: "#38aecc",
+        altColor: "#4dc9e6",
+        secondaryColor: "#86bbd8 ",
       },
       flex: {
         full: "0 0 100%",

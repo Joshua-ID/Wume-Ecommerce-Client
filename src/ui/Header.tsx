@@ -131,13 +131,13 @@ const Header = () => {
           </Link>
           <Link to={"/favorite"} className="relative block">
             <FiStar className="hover:text-skyText duration-200 cursor-pointer" />
-            <span className="inline-flex items-center justify-center bg-redText text-whiteText absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
+            <span className="inline-flex items-center justify-center bg-secondaryColor text-whiteText absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
               {favoriteProduct?.length > 0 ? favoriteProduct?.length : "0"}
             </span>
           </Link>
           <Link to={"/cart"} className="relative block">
             <FiShoppingBag className="hover:text-skyText duration-200 cursor-pointer" />
-            <span className="inline-flex items-center justify-center bg-redText text-whiteText absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
+            <span className="inline-flex items-center justify-center bg-secondaryColor text-whiteText absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
               {cartProduct?.length > 0 ? cartProduct?.length : "0"}
             </span>
           </Link>
@@ -165,7 +165,7 @@ const Header = () => {
                   <MenuItem key={item?._id}>
                     <Link
                       to={`/category/${item?._base}`}
-                      className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
+                      className="flex w-full items-center  gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
                     >
                       <img
                         src={item?.image}
@@ -183,7 +183,7 @@ const Header = () => {
             <Link
               to={link}
               key={title}
-              className="uppercase hidden md:inline-flex text-sm font-semibold text-whiteText/90 hover:text-whiteText duration-200 relative overflow-hidden group"
+              className="uppercase  md:inline-flex text-sm font-semibold text-whiteText/90 hover:text-secondaryColor duration-200 "
             >
               {title}
               <span className="inline-flex w-full h-[1px] bg-whiteText absolute bottom-0 left-0 transform -translate-x-[105%] group-hover:translate-x-0 duration-300" />

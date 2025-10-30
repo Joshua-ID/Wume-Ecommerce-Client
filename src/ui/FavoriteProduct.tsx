@@ -43,7 +43,7 @@ const FavoriteProduct = ({ product }: { product: ProductProps }) => {
         </div>
         <p>
           You are saving{" "}
-          <span className="text-sm font-semibold text-green-500">
+          <span className="text-sm font-semibold text-secondaryColor">
             <FormattedPrice
               amount={product?.regularPrice - product?.discountedPrice}
             />

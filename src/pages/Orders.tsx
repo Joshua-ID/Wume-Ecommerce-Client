@@ -193,7 +193,7 @@ const Orders = () => {
           </div>
         </div>
       ) : (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col gap-6 items-center">
           <p className="text-2xl font-semibold">No orders yet</p>
           <p>You did not create any purchase from us</p>
           <Link

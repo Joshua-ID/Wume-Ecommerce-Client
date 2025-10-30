@@ -21,7 +21,7 @@ interface StoreType {
   // user
   currentUser: UserType | null;
   isLoading: boolean;
-  getUserInfo: (uid: any) => Promise<void>;
+  getUserInfo: (uid: unknown) => Promise<void>;
   // cart
   cartProduct: CartProduct[];
   addToCart: (product: ProductProps) => Promise<void>;

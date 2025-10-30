@@ -41,7 +41,7 @@ const Login = ({ setLogin }: { setLogin: any }) => {
     }
   };
   return (
-    <div className="bg-gray-950 rounded-lg">
+    <div className="bg-darkText rounded-lg">
       <form
         onSubmit={handleLogin}
         className="max-w-5xl mx-auto pt-10 px-10 lg:px-0 text-white"
@@ -82,7 +82,7 @@ const Login = ({ setLogin }: { setLogin: any }) => {
         <button
           //   disabled={loading}
           type="submit"
-          className="mt-5 bg-indigo-700 w-full py-2 uppercase text-base font-bold tracking-wide text-gray-300 rounded-md hover:text-white hover:bg-indigo-600 duration-200"
+          className="mt-5 bg-skyText w-full py-2 uppercase text-base font-bold tracking-wide text-gray-300 rounded-md hover:text-white hover:bg-altColor duration-200"
         >
           {loading ? "Loading..." : "Login"}
         </button>

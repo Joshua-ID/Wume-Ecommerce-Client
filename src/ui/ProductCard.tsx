@@ -40,7 +40,7 @@ const ProductCard = ({ item, setSearchText }: Props) => {
       <div className="w-full h-60 relative p-2 group">
         <span
           onClick={open}
-          className="bg-black text-skyText absolute left-0 right-0 w-16 text-xs text-center py-1 rounded-md font-semibold inline-block z-10"
+          className="bg-darkText text-skyText absolute left-0 right-0 w-16 text-xs text-center py-1 rounded-md font-semibold inline-block z-10"
         >
           save {percentage.toFixed(0)}%
         </span>
@@ -53,11 +53,11 @@ const ProductCard = ({ item, setSearchText }: Props) => {
         <ProductCardSideNav product={item} />
       </div>
       <div className="flex flex-col gap-2 px-2 pb-2">
-        <h3 className="text-xs uppercase font-semibold text-lightText">
+        <h3 className="text-xs uppercase font-semibold text-skyText">
           {item?.overView}
         </h3>
         <h2 className="text-lg font-bold line-clamp-2">{item?.name}</h2>
-        <div className="text-base text-lightText flex items-center">
+        <div className="text-base text-skyText flex items-center">
           <MdOutlineStarOutline />
           <MdOutlineStarOutline />
           <MdOutlineStarOutline />

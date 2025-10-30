@@ -114,8 +114,7 @@ const Product = () => {
                   <span className="text-base font-semibold text-secondaryColor">
                     <FormattedPrice
                       amount={
-                        productData?.regularPrice! -
-                        productData?.discountedPrice!
+                        productData?.regularPrice - productData?.discountedPrice
                       }
                     />
                   </span>{" "}

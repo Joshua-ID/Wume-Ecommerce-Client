@@ -46,9 +46,9 @@ const Categories = () => {
             <img
               src={item?.image}
               alt="categoryImage"
-              className="w-full h-auto rounded-md group-hover:scale-110 duration-300"
+              className="w-full h-[140px] rounded-md group-hover:scale-110 duration-300"
             />
-            <div className="absolute bottom-3 w-full text-center">
+            <div className="absolute backdrop-blur-md w-full bottom-3 px-3 py-2 rounded-md  text-center">
               <p className="text-sm md:text-base font-bold">{item?.name}</p>
             </div>
           </Link>

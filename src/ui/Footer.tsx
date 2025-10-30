@@ -8,10 +8,15 @@ const Footer = () => {
     <div className="mt-10">
       <FooterTop />
       <Container className="flex flex-col md:flex-row items-center gap-4 justify-between">
-        <p>
-          {new Date().getFullYear()} Wume E-commerce Center. All rights
-          reserved.
-        </p>
+        <div>
+          <p className="font-bold text-skyText">
+            Hotline: <span className="text-darkText">+234 809 322 3489</span>
+          </p>
+          <p>
+            {new Date().getFullYear()} Wume E-commerce Center. All rights
+            reserved.
+          </p>
+        </div>
         <img src={payment} alt="payment-img" className="object-cover" />
       </Container>
     </div>

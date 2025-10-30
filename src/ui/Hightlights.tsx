@@ -32,6 +32,7 @@ const Hightlights = () => {
             style={{
               backgroundImage: `url(${item?.image})`,
               color: item?.color,
+              opacity: 0.7,
             }}
           ></div>
           <div
@@ -42,7 +43,10 @@ const Hightlights = () => {
               <h3 className="text-2xl font-bold max-w-44">{item?.name}</h3>
               <p className="text-base font-bold mt-4">{item?.title}</p>
             </div>
-            <Link to={item?._base} className="text-base font-normal">
+            <Link
+              to={item?._base}
+              className="text-base font-normal w-fit bg-darkText text-whiteText px-6 py-2 rounded-md inline-block mt-4"
+            >
               {item?.buttonTitle}
             </Link>
           </div>

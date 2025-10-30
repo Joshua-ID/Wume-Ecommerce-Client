@@ -30,7 +30,7 @@ const Blog = () => {
               <img
                 src={item?.image}
                 alt="blogImage"
-                className="w-full h-auto object-cover group-hover:scale-110 duration-300"
+                className="w-full h-[300px] rounded-md object-cover group-hover:scale-110 duration-300"
               />
             </div>
             <div className="mt-5">

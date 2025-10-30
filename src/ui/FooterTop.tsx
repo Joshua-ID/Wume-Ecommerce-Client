@@ -43,7 +43,7 @@ const FooterTop = () => {
                   <img
                     src={item?.imageSrc}
                     alt="image"
-                    className="mx-auto h-auto w-20"
+                    className="mx-auto h-14 w-30"
                   />
                 </div>
               </div>

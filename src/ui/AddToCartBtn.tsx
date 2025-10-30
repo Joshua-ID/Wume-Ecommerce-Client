@@ -20,7 +20,7 @@ const AddToCartBtn = ({
   const [existingProduct, setExistingProduct] = useState<ProductProps | null>(
     null
   );
-  const { addToCart, cartProduct, decreaseQuantity } = store();
+  const { addToCart, cartProduct, removeFromCart, decreaseQuantity } = store();
 
   useEffect(() => {
     const availableItem = cartProduct.find(
@@ -47,9 +47,9 @@ const AddToCartBtn = ({
           `${product?.name.substring(0, 10)} decreased successfully`
         );
       } else {
-        toast.error("You can not decrease less than 1");
+        removeFromCart(existingProduct?._id);
+        toast.error("You removed the product successfully!");
       }
-    } else {
     }
   };
 

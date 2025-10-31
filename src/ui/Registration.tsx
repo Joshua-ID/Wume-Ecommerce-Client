@@ -1,10 +1,10 @@
 import { useState } from "react";
 ("./Login");
 import Label from "./Label";
-import { MdPhotoLibrary } from "react-icons/md";
+// import { MdPhotoLibrary } from "react-icons/md";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../lib/firebase";
-import upload from "../lib/upload";
+// import upload from "../lib/upload";
 import { doc, setDoc } from "firebase/firestore";
 import Login from "./Login";
 
@@ -12,19 +12,19 @@ const Registration = () => {
   const [login, setLogin] = useState(true);
   const [loading, setLoading] = useState(false);
   const [errMsg, setErrMsg] = useState("");
-  const [avatar, setAvatar] = useState({
-    file: null,
-    url: "",
-  });
+  // const [avatar, setAvatar] = useState({
+  //   file: null,
+  //   url: "",
+  // });
 
-  const handleAvatar = (e: any) => {
-    if (e.target.files[0]) {
-      setAvatar({
-        file: e.target.files[0],
-        url: URL.createObjectURL(e.target.files[0]),
-      });
-    }
-  };
+  // const handleAvatar = (e: any) => {
+  //   if (e.target.files[0]) {
+  //     setAvatar({
+  //       file: e.target.files[0],
+  //       url: URL.createObjectURL(e.target.files[0]),
+  //     });
+  //   }
+  // };
   const handleRegistration = async (e: any) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -33,15 +33,15 @@ const Registration = () => {
     try {
       setLoading(true);
       const res = await createUserWithEmailAndPassword(auth, email, password);
-      let imageUrl = null;
-      if (avatar && avatar?.file) {
-        imageUrl = await upload(avatar?.file);
-      }
+      // let imageUrl = null;
+      // if (avatar && avatar?.file) {
+      //   imageUrl = await upload(avatar?.file);
+      // }
       await setDoc(doc(db, "users", res.user.uid), {
         firstName,
         lastName,
         email,
-        avatar: imageUrl,
+        // avatar: imageUrl,
         id: res.user.uid,
       });
       setLogin(true);
@@ -104,7 +104,7 @@ const Registration = () => {
                     className="block w-full rounded-md border-0 bg-white/5 py-1.5 px-4 outline-none text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-skyText sm:text-sm sm:leading-6 mt-2"
                   />
                 </div>
-                <div className="sm:col-span-4">
+                <div className="sm:col-span-3">
                   <Label title="Email address" htmlFor="email" />
                   <input
                     type="email"
@@ -112,7 +112,7 @@ const Registration = () => {
                     className="block w-full rounded-md border-0 bg-white/5 py-1.5 px-4 outline-none text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-skyText sm:text-sm sm:leading-6 mt-2"
                   />
                 </div>
-                <div className="sm:col-span-4">
+                <div className="sm:col-span-3">
                   <Label title="Password" htmlFor="password" />
                   <input
                     type="password"
@@ -120,7 +120,7 @@ const Registration = () => {
                     className="block w-full rounded-md border-0 bg-white/5 py-1.5 px-4 outline-none text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-skyText sm:text-sm sm:leading-6 mt-2"
                   />
                 </div>
-                <div className="col-span-full">
+                {/* <div className="col-span-full">
                   <div className="mt-2 flex items-center gap-x-3">
                     <div className="flex-1">
                       <Label title="Cover photo" />
@@ -159,7 +159,7 @@ const Registration = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             {errMsg && (
@@ -170,8 +170,10 @@ const Registration = () => {
             <button
               disabled={loading}
               type="submit"
-              className={`mt-5 w-full py-2 uppercase text-base font-bold tracking-wide text-gray-300 rounded-md hover:text-white hover:bg-indigo-600 duration-200 ${
-                loading ? "bg-gray-500 hover:bg-gray-500" : "bg-altColor"
+              className={`mt-5 w-full py-2 uppercase text-base font-bold tracking-wide  rounded-md text-white duration-200 ${
+                loading
+                  ? "bg-gray-500 hover:bg-gray-500 cursor-wait"
+                  : "bg-altColor hover:bg-skyText"
               }`}
             >
               {loading ? "Loading..." : "Send"}
@@ -181,7 +183,7 @@ const Registration = () => {
             Already have an Account{" "}
             <button
               onClick={() => setLogin(true)}
-              className="text-gray-200 font-semibold underline underline-offset-2 decoration-[1px] hover:text-white duration-200"
+              className="text-gray-200  ml-1 font-semibold hover:bg-altColor rounded-md py-1 px-1 hover:px-4 decoration-[1px] hover:text-white duration-200"
             >
               Login
             </button>

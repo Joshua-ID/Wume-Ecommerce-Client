@@ -6,7 +6,7 @@ import {
   MenuItems,
   Transition,
 } from "@headlessui/react";
-import { FaChevronDown, FaRegSave, FaRegUser } from "react-icons/fa";
+import { FaChevronDown, FaRegSave /* FaRegUser */ } from "react-icons/fa";
 import { IoClose, IoSearchOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { logo } from "../assets";
@@ -32,7 +32,7 @@ const Header = () => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const { cartProduct, favoriteProduct, currentUser } = store();
+  const { cartProduct, favoriteProduct /* currentUser */ } = store();
   useEffect(() => {
     const fetchData = async () => {
       const endpoint = `${config?.baseUrl}/products`;
@@ -118,7 +118,7 @@ const Header = () => {
 
         {/* Menubar */}
         <div className="flex items-center gap-x-6 text-2xl">
-          <Link to={"/profile"}>
+          {/* <Link to={"/profile"}>
             {currentUser ? (
               <img
                 src={currentUser?.avatar}
@@ -128,7 +128,7 @@ const Header = () => {
             ) : (
               <FaRegUser className="hover:text-skyText duration-200 cursor-pointer" />
             )}
-          </Link>
+          </Link> */}
           <Link to={"/favorite"} className="relative block">
             <FaRegSave className="hover:text-skyText duration-200 cursor-pointer" />
             <span className="inline-flex items-center justify-center bg-secondaryColor text-whiteText absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">

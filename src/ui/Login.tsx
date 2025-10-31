@@ -41,7 +41,7 @@ const Login = ({ setLogin }: { setLogin: any }) => {
     }
   };
   return (
-    <div className="bg-darkText rounded-lg">
+    <div className="bg-darkText rounded-lg  absolute right-0 w-full sm:w-fit sm:right-[1%] top-[17%] px-6 backdrop-blur-md">
       <form
         onSubmit={handleLogin}
         className="max-w-5xl mx-auto pt-10 px-10 lg:px-0 text-white"
@@ -91,7 +91,7 @@ const Login = ({ setLogin }: { setLogin: any }) => {
         Does not have an Account{" "}
         <button
           onClick={() => setLogin(false)}
-          className="text-gray-200 font-semibold underline underline-offset-2 decoration-[1px] hover:text-white duration-200"
+          className="text-gray-200 ml-1 font-semibold hover:bg-altColor py-1 px-1 hover:px-4 rounded-md decoration-[1px] hover:text-white duration-200"
         >
           Register
         </button>

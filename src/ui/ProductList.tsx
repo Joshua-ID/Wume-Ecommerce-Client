@@ -7,9 +7,14 @@ const ProductList = () => {
   return (
     <Container>
       <div className="mb-10">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2 justify-between">
           <Title text="Top Selling Products" />
-          <Link to={"/product"}>View All Products</Link>
+          <Link
+            className="text-sm md:text-base relative group overflow-hidden"
+            to={"/product"}
+          >
+            View All Products
+          </Link>
         </div>
         <div className="w-full h-[1px] bg-gray-200 mt-2" />
       </div>

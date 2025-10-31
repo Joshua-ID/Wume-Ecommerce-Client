@@ -39,9 +39,13 @@ const Hightlights = () => {
             className="relative z-10 p-6 flex flex-col justify-between h-full"
             style={{ color: item?.color }}
           >
-            <div>
-              <h3 className="text-2xl font-bold max-w-44">{item?.name}</h3>
-              <p className="text-base font-bold mt-4">{item?.title}</p>
+            <div className="backdrop-blur-sm py-2 px-5">
+              <h3 className="text-3xl text-darkText font-bold max-w-[300px]">
+                {item?.name}
+              </h3>
+              <p className="text-lg font-bold mt-4   text-darkText">
+                {item?.title}
+              </p>
             </div>
             <Link
               to={item?._base}

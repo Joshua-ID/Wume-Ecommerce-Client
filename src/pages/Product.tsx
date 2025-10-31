@@ -80,7 +80,11 @@ const Product = () => {
                   ))}
                 </div>
                 <div>
-                  <img src={imgUrl} alt="mainImage" />
+                  <img
+                    className="h-[250px] w-full md:h-[350px] object-cover"
+                    src={imgUrl}
+                    alt="mainImage"
+                  />
                 </div>
               </div>
               <div className="flex flex-col gap-4">

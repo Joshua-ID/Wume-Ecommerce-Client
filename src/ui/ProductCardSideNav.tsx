@@ -1,4 +1,4 @@
-import { FaRegEye, FaRegStar, FaStar } from "react-icons/fa";
+import { FaRegEye, FaRegSave, FaRegStar, FaSave, FaStar } from "react-icons/fa";
 import { LuArrowLeftRight } from "react-icons/lu";
 import { ProductProps } from "../../type";
 import { store } from "../lib/store";
@@ -35,14 +35,14 @@ const ProductCardSideNav = ({ product }: { product?: ProductProps }) => {
         onClick={handleFavorite}
         className="w-11 h-11 inline-flex text-black text-lg items-center justify-center rounded-full hover:text-white hover:bg-black duration-200"
       >
-        {existingProduct ? <FaStar /> : <FaRegStar />}
+        {existingProduct ? <FaRegSave /> : <FaSave />}
       </span>
-      <span className="w-11 h-11 inline-flex text-black text-lg items-center justify-center rounded-full hover:text-white hover:bg-black duration-200">
+      {/* <span className="w-11 h-11 inline-flex text-black text-lg items-center justify-center rounded-full hover:text-white hover:bg-black duration-200">
         <LuArrowLeftRight />
       </span>
       <span className="w-11 h-11 inline-flex text-black text-lg items-center justify-center rounded-full hover:text-white hover:bg-black duration-200">
         <FaRegEye />
-      </span>
+      </span> */}
     </div>
   );
 };

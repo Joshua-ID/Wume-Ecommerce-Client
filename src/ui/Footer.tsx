@@ -7,11 +7,11 @@ const Footer = () => {
     <div className="mt-10">
       <FooterTop />
       <Container className="flex flex-col md:flex-row items-center gap-4 justify-between">
-        <div>
-          <p className="font-bold text-skyText">
+        <div className="flex flex-col gap-2  ">
+          <p className="font-bold text-skyText text-center md:text-left ">
             Hotline: <span className="text-darkText">+234 809 322 3489</span>
           </p>
-          <p>
+          <p className="text-center md:text-left">
             {new Date().getFullYear()} Wume E-commerce Center. All rights
             reserved.
           </p>

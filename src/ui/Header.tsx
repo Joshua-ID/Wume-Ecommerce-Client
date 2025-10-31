@@ -6,8 +6,7 @@ import {
   MenuItems,
   Transition,
 } from "@headlessui/react";
-import { FaChevronDown } from "react-icons/fa";
-import { FiShoppingBag, FiStar, FiUser } from "react-icons/fi";
+import { FaChevronDown, FaRegSave, FaRegUser } from "react-icons/fa";
 import { IoClose, IoSearchOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { logo } from "../assets";
@@ -17,6 +16,7 @@ import { getData } from "../lib";
 import { CategoryProps, ProductProps } from "../../type";
 import ProductCard from "./ProductCard";
 import { store } from "../lib/store";
+import { BsCart4 } from "react-icons/bs";
 
 const bottomNavigation = [
   { title: "Home", link: "/" },
@@ -126,17 +126,17 @@ const Header = () => {
                 className="w-10 h-10 rounded-full object-cover"
               />
             ) : (
-              <FiUser className="hover:text-skyText duration-200 cursor-pointer" />
+              <FaRegUser className="hover:text-skyText duration-200 cursor-pointer" />
             )}
           </Link>
           <Link to={"/favorite"} className="relative block">
-            <FiStar className="hover:text-skyText duration-200 cursor-pointer" />
+            <FaRegSave className="hover:text-skyText duration-200 cursor-pointer" />
             <span className="inline-flex items-center justify-center bg-secondaryColor text-whiteText absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
               {favoriteProduct?.length > 0 ? favoriteProduct?.length : "0"}
             </span>
           </Link>
           <Link to={"/cart"} className="relative block">
-            <FiShoppingBag className="hover:text-skyText duration-200 cursor-pointer" />
+            <BsCart4 className="hover:text-skyText duration-200 cursor-pointer" />
             <span className="inline-flex items-center justify-center bg-secondaryColor text-whiteText absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
               {cartProduct?.length > 0 ? cartProduct?.length : "0"}
             </span>
@@ -147,7 +147,7 @@ const Header = () => {
         <Container className="py-2 max-w-4xl flex flex-col md:flex-row  md:items-center gap-5 justify-between">
           <Menu>
             <MenuButton className="inline-flex  justify-between items-center gap-2 rounded-md border border-gray-400 hover:border-white py-1.5 px-3 font-semibold text-gray-300 hover:text-whiteText">
-              Select Category <FaChevronDown className="text-base mt-1" />
+              All Categories <FaChevronDown className="text-base mt-1" />
             </MenuButton>
             <Transition
               enter="transition ease-out duration-75"
@@ -158,8 +158,8 @@ const Header = () => {
               leaveTo="opacity-0 scale-95"
             >
               <MenuItems
-                anchor="bottom end"
-                className="w-11/12 mt-2 origin-top-right rounded-xl border border-white/5 bg-darkText p-1 text-sm/6 text-gray-300 [--anchor-gap:var(--spacing-1)] focus:outline-none hover:text-white z-50"
+                anchor="bottom start"
+                className="w-11/12 md:w-72 mt-2 origin-top-right rounded-xl border border-white/5 bg-darkText p-1 text-sm/6 text-gray-300 [--anchor-gap:var(--spacing-1)] focus:outline-none hover:text-white z-50"
               >
                 {categories.map((item: CategoryProps) => (
                   <MenuItem key={item?._id}>

@@ -4,19 +4,19 @@ const FooterTop = () => {
   const incentives = [
     {
       name: "Free shipping",
-      imageSrc: "../../src/assets/shipping.png",
+      imageSrc: "/src/assets/shipping.png",
       description:
         "It's not actually free we just price it into the products. Someone's paying for it, and it's not us.",
     },
     {
       name: "10-year warranty",
-      imageSrc: "../../src/assets/warranty.png",
+      imageSrc: "/src/assets/warranty.png",
       description:
         "If it breaks in the first 10 years we'll replace it. After that you're on your own though.",
     },
     {
       name: "Exchanges",
-      imageSrc: "../../src/assets/exchange.png",
+      imageSrc: "/src/assets/exchange.png",
       description:
         "If you don't like it, trade it to one of your friends for something of theirs. Don't send it here though.",
     },

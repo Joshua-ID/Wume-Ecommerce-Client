@@ -27,12 +27,12 @@ const DiscountedBanner = () => {
         <Title text="Popular Search" />
         <div className="w-full h-[1px] bg-gray-200 mt-3" />
       </div>
-      <div className="my-7 flex items-center flex-wrap gap-4">
+      <div className="my-7 flex items-center flex-wrap gap-2 sm:gap-4">
         {popularSearchItems?.map(({ title, link }) => (
           <Link
             key={title}
             to={`/category/${link}`}
-            className="border border-[px] border-gray-300 px-8 py-3 rounded-full capitalize font-medium hover:bg-black hover:text-white duration-200"
+            className="border border-[px] border-gray-300 px-4 py-1 rounded-full capitalize font-medium hover:bg-black hover:text-white duration-200"
           >
             {title}
           </Link>

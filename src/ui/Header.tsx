@@ -68,7 +68,7 @@ const Header = () => {
 
   return (
     <div className="w-full bg-whiteText md:sticky md:top-0 z-50">
-      <div className="max-w-screen-xl mx-auto h-20 flex items-center justify-between px-4 lg:px-0">
+      <div className="max-w-screen-xl mx-auto h-20 flex gap-2 items-center justify-between px-4 lg:px-0">
         {/* Logo */}
         <Link to={"/"}>
           <img src={logo} alt="logo" className="w-44" />
